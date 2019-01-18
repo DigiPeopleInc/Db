@@ -26,10 +26,10 @@ android {
 
 dependencies {
     // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     // Room
-    implementation "android.arch.persistence.room:runtime:1.1.1"
-    implementation "android.arch.persistence.room:rxjava2:1.1.1"
+    api "android.arch.persistence.room:runtime:1.1.1"
+    api "android.arch.persistence.room:rxjava2:1.1.1"
 }
 
 ext {
@@ -40,4 +40,4 @@ ext {
     publishVcsUrl = "https://github.com/DigiPeopleInc/Db"
 }
 
-apply from: 'https://raw.githubusercontent.com/DigiPeopleInc/Bintray/master/publish_v1.gradle'
+apply from: 'https://raw.githubusercontent.com/DigiPeopleInc/Bintray/master/publish_v2.gradle'
