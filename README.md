@@ -1,2 +1,2 @@
-# Db
+# DbRepository
 Repository pattern around database
