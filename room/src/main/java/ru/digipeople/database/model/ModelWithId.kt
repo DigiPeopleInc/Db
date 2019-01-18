@@ -1,4 +1,4 @@
-package ru.digipeople.db.model
+package ru.digipeople.database.model
 
 /**
  * Модель локальной БД с Id.

@@ -1,6 +1,6 @@
-package ru.digipeople.db.repository
+package ru.digipeople.database.repository
 
-import ru.digipeople.db.model.ModelWithId
+import ru.digipeople.database.model.ModelWithId
 
 /**
  * Репозиторий для классической сущности локальной БД.

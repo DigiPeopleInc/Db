@@ -1,7 +1,7 @@
-package ru.digipeople.db.room.repository
+package ru.digipeople.database.room.repository
 
 import android.arch.persistence.room.RoomDatabase
-import ru.digipeople.db.repository.Repository
+import ru.digipeople.database.repository.Repository
 
 /**
  * Репозиторий.

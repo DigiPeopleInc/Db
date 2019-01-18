@@ -33,11 +33,11 @@ dependencies {
 }
 
 ext {
-    publishGroupId = 'ru.digipeople.db'
+    publishGroupId = 'ru.digipeople.database'
     publishArtifactId = 'room'
     publishVersion = '1.0.0'
     publishDesc = "Repository pattern around room database"
-    publishVcsUrl = "https://github.com/DigiPeopleInc/Db"
+    publishVcsUrl = "https://github.com/DigiPeopleInc/DbRepository"
 }
 
 apply from: 'https://raw.githubusercontent.com/DigiPeopleInc/Bintray/master/publish_v2.gradle'

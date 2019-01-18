@@ -1,9 +1,9 @@
-package ru.digipeople.db.room.repository
+package ru.digipeople.database.room.repository
 
 import android.arch.persistence.room.RoomDatabase
 
-import ru.digipeople.db.model.ModelWithId
-import ru.digipeople.db.room.entity.EntityWithId
+import ru.digipeople.database.model.ModelWithId
+import ru.digipeople.database.room.entity.EntityWithId
 
 /**
  * Базовый репозиторий для моделей с Id типа [Long].

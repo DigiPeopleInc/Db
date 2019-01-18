@@ -1,4 +1,4 @@
-package ru.digipeople.db.room.dao
+package ru.digipeople.database.room.dao
 
 import android.arch.persistence.room.Delete
 import android.arch.persistence.room.Insert

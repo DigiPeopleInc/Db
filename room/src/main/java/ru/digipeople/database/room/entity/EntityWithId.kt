@@ -1,4 +1,4 @@
-package ru.digipeople.db.room.entity
+package ru.digipeople.database.room.entity
 
 /**
  * Сущность локальной БД с Id.

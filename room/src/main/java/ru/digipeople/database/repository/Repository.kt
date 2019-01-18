@@ -1,4 +1,4 @@
-package ru.digipeople.db.repository
+package ru.digipeople.database.repository
 
 /**
  * Репозиторий для доступа к данным локальной БД.

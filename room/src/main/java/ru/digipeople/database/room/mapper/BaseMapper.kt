@@ -1,4 +1,4 @@
-package ru.digipeople.db.room.mapper
+package ru.digipeople.database.room.mapper
 
 /**
  * Базовый маппер.

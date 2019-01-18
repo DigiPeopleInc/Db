@@ -1,7 +1,7 @@
-package ru.digipeople.db.room
+package ru.digipeople.database.room
 
 import android.arch.persistence.room.RoomDatabase
-import ru.digipeople.db.DbTransaction
+import ru.digipeople.database.DbTransaction
 
 /**
  * Транзакция БД.

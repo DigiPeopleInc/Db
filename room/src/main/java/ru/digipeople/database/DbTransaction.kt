@@ -1,4 +1,4 @@
-package ru.digipeople.db
+package ru.digipeople.database
 
 /**
  * Транзакция БД.
