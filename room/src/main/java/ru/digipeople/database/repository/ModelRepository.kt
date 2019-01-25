@@ -9,6 +9,17 @@ import ru.digipeople.database.model.ModelWithId
  */
 interface ModelRepository<Model, Id> : Repository where Model : ModelWithId<Id> {
     /**
+     * Возвращает запись по Id
+     * @param id Id записи
+     */
+    fun getById(id: Id): Model?
+
+    /**
+     * Возвращает все записи из таблицы БД
+     */
+    fun getAll(): List<Model>
+
+    /**
      * Выполняет вставку [model] в БД
      * @param model Модель
      */
@@ -37,4 +48,15 @@ interface ModelRepository<Model, Id> : Repository where Model : ModelWithId<Id> 
      * @param models Список моделей
      */
     fun delete(models: List<Model>)
+
+    /**
+     * Удаляет все записи из таблицы БД
+     */
+    fun deleteAll()
+
+    /**
+     * Проверяет наличие записи по Id
+     * @param id Id записи
+     */
+    fun exists(id: Id): Boolean
 }

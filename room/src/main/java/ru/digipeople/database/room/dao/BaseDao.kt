@@ -1,9 +1,7 @@
 package ru.digipeople.database.room.dao
 
-import android.arch.persistence.room.Delete
-import android.arch.persistence.room.Insert
-import android.arch.persistence.room.OnConflictStrategy
-import android.arch.persistence.room.Update
+import android.arch.persistence.db.SupportSQLiteQuery
+import android.arch.persistence.room.*
 
 /**
  * Базовый DAO.
@@ -11,6 +9,27 @@ import android.arch.persistence.room.Update
  * @author Aleksandr Brazhkin
  */
 interface BaseDao<Entity> {
+    /**
+     * Возвращает запись из таблицы БД
+     * @param query Запрос
+     */
+    @RawQuery
+    fun getSingle(query: SupportSQLiteQuery): Entity?
+
+    /**
+     * Возвращает список записей из таблицы БД
+     * @param query Запрос
+     */
+    @RawQuery
+    fun getList(query: SupportSQLiteQuery): List<Entity>
+
+    /**
+     * Возвращает булево значение из запроса к БД
+     * @param query Запрос
+     */
+    @RawQuery
+    fun getBoolean(query: SupportSQLiteQuery): Boolean
+
     /**
      * Вставляет [entity] в БД
      * @param entity Сущность

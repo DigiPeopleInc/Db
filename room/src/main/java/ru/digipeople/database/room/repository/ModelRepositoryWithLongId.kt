@@ -10,7 +10,8 @@ import ru.digipeople.database.room.entity.EntityWithId
  *
  * @author Aleksandr Brazhkin
  */
-abstract class ModelRepositoryWithLongId<Model : ModelWithId<Long>, Entity : EntityWithId<Long>> protected constructor(appDatabase: RoomDatabase) : ModelRepositoryImpl<Model, Entity, Long>(appDatabase) {
+abstract class ModelRepositoryWithLongId<Model : ModelWithId<Long>, Entity : EntityWithId<Long>>
+protected constructor(roomDb: RoomDatabase) : ModelRepositoryImpl<Model, Entity, Long>(roomDb) {
 
     override fun insert(model: Model) {
         val entity = mapper.modelToEntity(model)
