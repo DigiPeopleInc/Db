@@ -67,4 +67,9 @@ protected constructor(roomDb: RoomDatabase) : RepositoryImpl(roomDb), ModelRepos
         val query = SimpleSQLiteQuery("SELECT EXISTS(SELECT * FROM $tableName WHERE $idColumnName = ?)", arrayOf(id as Any))
         return dao.getBoolean(query)
     }
+
+    override fun count(): Long {
+        val query = SimpleSQLiteQuery("SELECT COUNT(*) FROM $tableName")
+        return dao.getLong(query)
+    }
 }

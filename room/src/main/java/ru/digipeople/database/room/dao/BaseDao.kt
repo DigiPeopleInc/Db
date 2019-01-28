@@ -31,6 +31,13 @@ interface BaseDao<Entity> {
     fun getBoolean(query: SupportSQLiteQuery): Boolean
 
     /**
+     * Возвращает long значение из запроса к БД
+     * @param query Запрос
+     */
+    @RawQuery
+    fun getLong(query: SupportSQLiteQuery): Long
+
+    /**
      * Вставляет [entity] в БД
      * @param entity Сущность
      */

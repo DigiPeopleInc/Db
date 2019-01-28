@@ -59,4 +59,9 @@ interface ModelRepository<Model, Id> : Repository where Model : ModelWithId<Id> 
      * @param id Id записи
      */
     fun exists(id: Id): Boolean
+
+    /**
+     * Возвращает количество записей в таблице
+     */
+    fun count(): Long
 }
