@@ -2,6 +2,7 @@ package ru.digipeople.database.room.dao
 
 import android.arch.persistence.db.SupportSQLiteQuery
 import android.arch.persistence.room.*
+import android.database.Cursor
 
 /**
  * Базовый DAO.
@@ -22,6 +23,13 @@ interface BaseDao<Entity> {
      */
     @RawQuery
     fun getList(query: SupportSQLiteQuery): List<Entity>
+
+    /**
+     * Возвращает курсор
+     * @param query Запрос
+     */
+    @RawQuery
+    fun getCursor(query: SupportSQLiteQuery): Cursor
 
     /**
      * Возвращает булево значение из запроса к БД
