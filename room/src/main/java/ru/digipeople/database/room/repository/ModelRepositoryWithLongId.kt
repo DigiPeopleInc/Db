@@ -14,14 +14,14 @@ abstract class ModelRepositoryWithLongId<Model : ModelWithId<Long>, Entity : Ent
 protected constructor(roomDb: RoomDatabase) : ModelRepositoryImpl<Model, Entity, Long>(roomDb) {
 
     override fun insert(model: Model) {
-        val entity = mapper.modelToEntity(model)
-        val id = dao.insert(entity!!)
+        val entity = mapper.modelToEntity(model)!!
+        val id = insertInternal(entity)
         model.id = id
     }
 
     override fun insert(models: List<Model>) {
-        val entities = mapper.modelListToEntityList(models)
-        val ids = dao.insert(entities!!)
+        val entities = mapper.modelListToEntityList(models)!!
+        val ids = insertInternal(entities)
         for (i in models.indices) {
             models[i].id = ids[i]
         }

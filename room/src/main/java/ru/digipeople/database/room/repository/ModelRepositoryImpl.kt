@@ -37,17 +37,18 @@ protected constructor(roomDb: RoomDatabase) : RepositoryImpl(roomDb), ModelRepos
     }
 
     override fun insert(model: Model) {
-        val entity = mapper.modelToEntity(model)
-        dao.insert(entity!!)
+        val entity = mapper.modelToEntity(model)!!
+        insertInternal(entity)
     }
 
     override fun insert(models: List<Model>) {
-        val entities = mapper.modelListToEntityList(models)
-        dao.insert(entities!!)
+        val entities = mapper.modelListToEntityList(models)!!
+        insertInternal(entities)
     }
 
     override fun update(model: Model) {
-        dao.update(mapper.modelToEntity(model)!!)
+        val entity = mapper.modelToEntity(model)!!
+        updateInternal(entity)
     }
 
     override fun delete(model: Model) {
@@ -71,5 +72,17 @@ protected constructor(roomDb: RoomDatabase) : RepositoryImpl(roomDb), ModelRepos
     override fun count(): Long {
         val query = SimpleSQLiteQuery("SELECT COUNT(*) FROM $tableName")
         return dao.getLong(query)
+    }
+
+    protected fun insertInternal(entity: Entity): Long {
+        return dao.insert(entity)
+    }
+
+    protected fun insertInternal(entities: List<Entity>): LongArray {
+        return dao.insert(entities)
+    }
+
+    protected fun updateInternal(entity: Entity) {
+        dao.update(entity)
     }
 }
