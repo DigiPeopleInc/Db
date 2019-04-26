@@ -7,8 +7,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
-        versionCode 6
-        versionName "1.0.5"
+        versionCode 7
+        versionName "1.0.6"
     }
 
     buildTypes {
@@ -35,7 +35,7 @@ dependencies {
 ext {
     publishGroupId = 'ru.digipeople.database'
     publishArtifactId = 'room'
-    publishVersion = '1.0.5'
+    publishVersion = '1.0.6'
     publishDesc = "Repository pattern around room database"
     publishVcsUrl = "https://github.com/DigiPeopleInc/DbRepository"
 }

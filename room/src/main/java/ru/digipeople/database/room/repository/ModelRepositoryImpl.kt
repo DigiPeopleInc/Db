@@ -74,15 +74,15 @@ protected constructor(roomDb: RoomDatabase) : RepositoryImpl(roomDb), ModelRepos
         return dao.getLong(query)
     }
 
-    fun insertInternal(entity: Entity): Long {
+    protected open fun insertInternal(entity: Entity): Long {
         return dao.insert(entity)
     }
 
-    fun insertInternal(entities: List<Entity>): LongArray {
+    protected open fun insertInternal(entities: List<Entity>): LongArray {
         return dao.insert(entities)
     }
 
-    fun updateInternal(entity: Entity) {
+    protected open fun updateInternal(entity: Entity) {
         dao.update(entity)
     }
 }
